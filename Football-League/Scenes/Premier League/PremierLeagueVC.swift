@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PremierLeagueVC.swift
 //  Football-League
 //
 //  Created by Mahmoud Abdul-Wahab on 03/07/2021.
@@ -7,13 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PremierLeagueVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
 
 
 }
-
