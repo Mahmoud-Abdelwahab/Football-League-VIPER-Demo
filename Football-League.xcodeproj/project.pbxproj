@@ -14,6 +14,14 @@
 		A7ADA8342690992A002B1CB5 /* PremierLeagueVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7ADA8322690992A002B1CB5 /* PremierLeagueVC.xib */; };
 		A7ADA83C26909B29002B1CB5 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA83A26909B28002B1CB5 /* TeamCell.swift */; };
 		A7ADA83D26909B29002B1CB5 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7ADA83B26909B28002B1CB5 /* TeamCell.xib */; };
+		A7ADA84126909D23002B1CB5 /* TeamInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA83F26909D23002B1CB5 /* TeamInfoVC.swift */; };
+		A7ADA84226909D23002B1CB5 /* TeamInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7ADA84026909D23002B1CB5 /* TeamInfoVC.xib */; };
+		A7ADA8442690A718002B1CB5 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8432690A718002B1CB5 /* TeamModel.swift */; };
+		A7ADA8462690A724002B1CB5 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8452690A724002B1CB5 /* PlayerModel.swift */; };
+		A7ADA8482690A962002B1CB5 /* PremierLeagueInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8472690A962002B1CB5 /* PremierLeagueInteractor.swift */; };
+		A7ADA84B2690A97E002B1CB5 /* PremierLeaguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA84A2690A97E002B1CB5 /* PremierLeaguePresenter.swift */; };
+		A7ADA84D2690A9A9002B1CB5 /* PremierLeagueRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA84C2690A9A9002B1CB5 /* PremierLeagueRouter.swift */; };
+		A7ADA84F2690AA08002B1CB5 /* PremierLeagueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA84E2690AA08002B1CB5 /* PremierLeagueProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		A7ADA8322690992A002B1CB5 /* PremierLeagueVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PremierLeagueVC.xib; sourceTree = "<group>"; };
 		A7ADA83A26909B28002B1CB5 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		A7ADA83B26909B28002B1CB5 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
+		A7ADA83F26909D23002B1CB5 /* TeamInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoVC.swift; sourceTree = "<group>"; };
+		A7ADA84026909D23002B1CB5 /* TeamInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamInfoVC.xib; sourceTree = "<group>"; };
+		A7ADA8432690A718002B1CB5 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		A7ADA8452690A724002B1CB5 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		A7ADA8472690A962002B1CB5 /* PremierLeagueInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueInteractor.swift; sourceTree = "<group>"; };
+		A7ADA84A2690A97E002B1CB5 /* PremierLeaguePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeaguePresenter.swift; sourceTree = "<group>"; };
+		A7ADA84C2690A9A9002B1CB5 /* PremierLeagueRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueRouter.swift; sourceTree = "<group>"; };
+		A7ADA84E2690AA08002B1CB5 /* PremierLeagueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				A7ADA830269098FC002B1CB5 /* Premier League */,
+				A7ADA83E26909CF0002B1CB5 /* Team Info */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -83,7 +100,11 @@
 			isa = PBXGroup;
 			children = (
 				A7ADA83926909B0C002B1CB5 /* TeamCell */,
+				A7ADA84E2690AA08002B1CB5 /* PremierLeagueProtocol.swift */,
 				A7ADA8312690992A002B1CB5 /* PremierLeagueVC.swift */,
+				A7ADA84A2690A97E002B1CB5 /* PremierLeaguePresenter.swift */,
+				A7ADA8472690A962002B1CB5 /* PremierLeagueInteractor.swift */,
+				A7ADA84C2690A9A9002B1CB5 /* PremierLeagueRouter.swift */,
 				A7ADA8322690992A002B1CB5 /* PremierLeagueVC.xib */,
 			);
 			path = "Premier League";
@@ -113,6 +134,8 @@
 		A7ADA83826909A0E002B1CB5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A7ADA8432690A718002B1CB5 /* TeamModel.swift */,
+				A7ADA8452690A724002B1CB5 /* PlayerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +147,15 @@
 				A7ADA83B26909B28002B1CB5 /* TeamCell.xib */,
 			);
 			path = TeamCell;
+			sourceTree = "<group>";
+		};
+		A7ADA83E26909CF0002B1CB5 /* Team Info */ = {
+			isa = PBXGroup;
+			children = (
+				A7ADA83F26909D23002B1CB5 /* TeamInfoVC.swift */,
+				A7ADA84026909D23002B1CB5 /* TeamInfoVC.xib */,
+			);
+			path = "Team Info";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +218,7 @@
 				A7ADA83D26909B29002B1CB5 /* TeamCell.xib in Resources */,
 				A7ADA828269098B6002B1CB5 /* LaunchScreen.storyboard in Resources */,
 				A7ADA8342690992A002B1CB5 /* PremierLeagueVC.xib in Resources */,
+				A7ADA84226909D23002B1CB5 /* TeamInfoVC.xib in Resources */,
 				A7ADA825269098B6002B1CB5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,9 +230,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7ADA8462690A724002B1CB5 /* PlayerModel.swift in Sources */,
 				A7ADA8332690992A002B1CB5 /* PremierLeagueVC.swift in Sources */,
+				A7ADA8442690A718002B1CB5 /* TeamModel.swift in Sources */,
+				A7ADA84F2690AA08002B1CB5 /* PremierLeagueProtocol.swift in Sources */,
 				A7ADA81C269098B3002B1CB5 /* AppDelegate.swift in Sources */,
 				A7ADA83C26909B29002B1CB5 /* TeamCell.swift in Sources */,
+				A7ADA84D2690A9A9002B1CB5 /* PremierLeagueRouter.swift in Sources */,
+				A7ADA8482690A962002B1CB5 /* PremierLeagueInteractor.swift in Sources */,
+				A7ADA84B2690A97E002B1CB5 /* PremierLeaguePresenter.swift in Sources */,
+				A7ADA84126909D23002B1CB5 /* TeamInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

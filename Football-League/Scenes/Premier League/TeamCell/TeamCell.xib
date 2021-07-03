@@ -51,6 +51,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyK-FE-IPG">
                                                         <rect key="frame" x="176" y="10" width="56" height="30"/>
                                                         <state key="normal" title="Website"/>
+                                                        <connections>
+                                                            <action selector="didTapShowTeamWebsiteBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RDx-4R-aXw"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -122,6 +125,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="teamAddressLable" destination="87A-8w-SsF" id="RU7-eJ-KNU"/>
+                <outlet property="teamLogoImageView" destination="eXn-3l-taY" id="8x7-uM-zht"/>
+            </connections>
             <point key="canvasLocation" x="159.42028985507247" y="108.48214285714285"/>
         </tableViewCell>
     </objects>
