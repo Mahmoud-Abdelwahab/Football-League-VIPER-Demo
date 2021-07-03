@@ -8,7 +8,7 @@
 import Foundation
 
 class PremierLeagueInteractor {
-   weak var presenter: PremierLeaguePresenterProtocol?
+   weak var presenter: PremierLeagueInteractorOutputProtocol?
 }
 
 extension PremierLeagueInteractor: PremierLeagueInteractorInputProtocol{

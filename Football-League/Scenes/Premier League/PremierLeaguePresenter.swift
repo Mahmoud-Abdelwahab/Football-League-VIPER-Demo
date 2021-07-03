@@ -9,7 +9,11 @@ import Foundation
 
 class PremierLeaguePresenter{
     weak var view: PremierLeagueViewProtocol?
-    private let interactor: PremierLeagueInteractorInputProtocol?
+    private var interactor: PremierLeagueInteractorInputProtocol?{
+        didSet{
+            
+        }
+    }
     private let router    : PremierLeagueRouterProtocol?
     
     init(view: PremierLeagueViewProtocol, interactor:PremierLeagueInteractorInputProtocol,

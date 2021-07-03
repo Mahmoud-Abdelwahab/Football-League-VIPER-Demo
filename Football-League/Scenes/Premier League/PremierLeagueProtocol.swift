@@ -22,9 +22,9 @@ protocol PremierLeagueRouterProtocol {
 // Interactor
 
 protocol  PremierLeagueInteractorInputProtocol {
-    var presenter: PremierLeaguePresenterProtocol?{get set}
+    var presenter: PremierLeagueInteractorOutputProtocol?{get set}
 }
 
-protocol  PremierLeagueInteractorOutputProtocol {
+protocol  PremierLeagueInteractorOutputProtocol:AnyObject {
     
 }
