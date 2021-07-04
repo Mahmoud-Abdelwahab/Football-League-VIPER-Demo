@@ -6,15 +6,16 @@
 //
 
 import UIKit
+import SafariServices
 
 class PremierLeagueRouter {
     weak var viewController: UIViewController?
+    
 }
 
 extension PremierLeagueRouter: PremierLeagueRouterProtocol{
     
     static func createModule()->UIViewController{
-        
         let view                = PremierLeagueVC()
         let interactor          = PremierLeagueInteractor()
         let router              = PremierLeagueRouter()
@@ -24,4 +25,11 @@ extension PremierLeagueRouter: PremierLeagueRouterProtocol{
         router.viewController   = view
         return view
     }
+    
+    func presentSafariVC (with url : URL) {
+         let safariVC = SFSafariViewController(url: url)
+         safariVC.preferredControlTintColor = .systemGreen
+        viewController?.present(safariVC , animated: true)
+     }
+    
 }

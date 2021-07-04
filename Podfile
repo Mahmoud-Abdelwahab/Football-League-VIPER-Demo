@@ -7,4 +7,6 @@ target 'Football-League' do
 
   # Pods for Football-League
   pod 'Moya', '~> 14.0'
+  pod 'SVGKit', :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '2.x'
+  pod 'Kingfisher', '~> 6.0'
 end

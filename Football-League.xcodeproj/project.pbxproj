@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,13 @@
 		A7ADA84F2690AA08002B1CB5 /* PremierLeagueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA84E2690AA08002B1CB5 /* PremierLeagueProtocol.swift */; };
 		A7ADA8532690FFAA002B1CB5 /* RemoteLeagueTeamsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8522690FFAA002B1CB5 /* RemoteLeagueTeamsWorker.swift */; };
 		A7ADA8552690FFFB002B1CB5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8542690FFFB002B1CB5 /* Constants.swift */; };
+		A7ADA85E26910997002B1CB5 /* MoyaHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA85D26910997002B1CB5 /* MoyaHelpers.swift */; };
+		A7ADA86026910A18002B1CB5 /* TeamsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA85F26910A18002B1CB5 /* TeamsService.swift */; };
+		A7ADA86226911664002B1CB5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA86126911664002B1CB5 /* AppError.swift */; };
+		A7ADA864269126C7002B1CB5 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA863269126C7002B1CB5 /* NetworkManger.swift */; };
+		A7ADA86626913E40002B1CB5 /* SVGImgProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA86526913E40002B1CB5 /* SVGImgProcessor.swift */; };
+		A7ADA86A2691AB79002B1CB5 /* UIIViewController+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8692691AB79002B1CB5 /* UIIViewController+EX.swift */; };
+		A7ADA86D2691AC17002B1CB5 /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA86C2691AC17002B1CB5 /* AppHelper.swift */; };
 		B9ECE176EE8525EEC297E853 /* Pods_Football_League.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05064623BA5C2DF3BA3902E9 /* Pods_Football_League.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +56,13 @@
 		A7ADA84E2690AA08002B1CB5 /* PremierLeagueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueProtocol.swift; sourceTree = "<group>"; };
 		A7ADA8522690FFAA002B1CB5 /* RemoteLeagueTeamsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLeagueTeamsWorker.swift; sourceTree = "<group>"; };
 		A7ADA8542690FFFB002B1CB5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A7ADA85D26910997002B1CB5 /* MoyaHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaHelpers.swift; sourceTree = "<group>"; };
+		A7ADA85F26910A18002B1CB5 /* TeamsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsService.swift; sourceTree = "<group>"; };
+		A7ADA86126911664002B1CB5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		A7ADA863269126C7002B1CB5 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
+		A7ADA86526913E40002B1CB5 /* SVGImgProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGImgProcessor.swift; sourceTree = "<group>"; };
+		A7ADA8692691AB79002B1CB5 /* UIIViewController+EX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIViewController+EX.swift"; sourceTree = "<group>"; };
+		A7ADA86C2691AC17002B1CB5 /* AppHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
 		CAAB33BD193DADCA3160250C /* Pods-Football-League.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Football-League.release.xcconfig"; path = "Target Support Files/Pods-Football-League/Pods-Football-League.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +84,6 @@
 				061D054781B6A20EAA753033 /* Pods-Football-League.debug.xcconfig */,
 				CAAB33BD193DADCA3160250C /* Pods-Football-League.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -134,6 +147,10 @@
 			isa = PBXGroup;
 			children = (
 				A7ADA8542690FFFB002B1CB5 /* Constants.swift */,
+				A7ADA85D26910997002B1CB5 /* MoyaHelpers.swift */,
+				A7ADA85F26910A18002B1CB5 /* TeamsService.swift */,
+				A7ADA86126911664002B1CB5 /* AppError.swift */,
+				A7ADA863269126C7002B1CB5 /* NetworkManger.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -150,6 +167,9 @@
 		A7ADA83726909A09002B1CB5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A7ADA86B2691ABF4002B1CB5 /* Helpers */,
+				A7ADA8682691AB5A002B1CB5 /* Extentions */,
+				A7ADA8672691AB47002B1CB5 /* ImageProcessor */,
 				A7ADA81B269098B3002B1CB5 /* AppDelegate.swift */,
 			);
 			path = Core;
@@ -195,6 +215,30 @@
 			children = (
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		A7ADA8672691AB47002B1CB5 /* ImageProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				A7ADA86526913E40002B1CB5 /* SVGImgProcessor.swift */,
+			);
+			path = ImageProcessor;
+			sourceTree = "<group>";
+		};
+		A7ADA8682691AB5A002B1CB5 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				A7ADA8692691AB79002B1CB5 /* UIIViewController+EX.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		A7ADA86B2691ABF4002B1CB5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A7ADA86C2691AC17002B1CB5 /* AppHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		E7DCDEC78C44B02F129719AC /* Frameworks */ = {
@@ -321,10 +365,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7ADA86026910A18002B1CB5 /* TeamsService.swift in Sources */,
+				A7ADA86A2691AB79002B1CB5 /* UIIViewController+EX.swift in Sources */,
 				A7ADA8462690A724002B1CB5 /* PlayerModel.swift in Sources */,
+				A7ADA86626913E40002B1CB5 /* SVGImgProcessor.swift in Sources */,
+				A7ADA864269126C7002B1CB5 /* NetworkManger.swift in Sources */,
+				A7ADA86226911664002B1CB5 /* AppError.swift in Sources */,
 				A7ADA8332690992A002B1CB5 /* PremierLeagueVC.swift in Sources */,
 				A7ADA8442690A718002B1CB5 /* TeamModel.swift in Sources */,
 				A7ADA84F2690AA08002B1CB5 /* PremierLeagueProtocol.swift in Sources */,
+				A7ADA86D2691AC17002B1CB5 /* AppHelper.swift in Sources */,
+				A7ADA85E26910997002B1CB5 /* MoyaHelpers.swift in Sources */,
 				A7ADA81C269098B3002B1CB5 /* AppDelegate.swift in Sources */,
 				A7ADA83C26909B29002B1CB5 /* TeamCell.swift in Sources */,
 				A7ADA84D2690A9A9002B1CB5 /* PremierLeagueRouter.swift in Sources */,

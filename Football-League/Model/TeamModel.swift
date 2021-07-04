@@ -8,6 +8,9 @@
 import Foundation
 
 // MARK: - Team
+struct TeamList: Codable {
+        let teams: [Team]?
+    }
 struct Team: Codable {
     let id: Int?
     let name, shortName: String?
@@ -23,6 +26,21 @@ struct Team: Codable {
         case id, name, shortName
         case crestURL = "crestUrl"
         case address, phone, website, email, founded, clubColors, venue, squad
+    }
+}
+
+struct TeamListVM {
+    let id: Int?
+    let name: String?
+    let address: String?
+    let website: URL?
+    let teamLogo: URL?
+    init(team: Team) {
+        self.id = team.id
+        self.name = team.shortName
+        self.teamLogo  = URL(string: team.crestURL ?? "")
+        self.address   = team.address
+        self.website   =  URL(string: team.website ?? "")
     }
 }
 
