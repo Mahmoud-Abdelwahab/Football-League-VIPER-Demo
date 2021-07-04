@@ -12,13 +12,11 @@ class TeamInfoVC: UIViewController {
     var presenter: TeamInfoPresenterProtocol?
     
     @IBOutlet weak var playersTableView: UITableView!
- 
     @IBOutlet weak var teamAvatarImage: UIImageView!
-    
     @IBOutlet weak var noPlayerFoundPlaceHolderLable: UILabel!
     @IBOutlet weak var teamNameLable: UILabel!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
@@ -36,7 +34,7 @@ class TeamInfoVC: UIViewController {
 
 
 extension TeamInfoVC: TeamInfoViewProtocol{
-  
+    
     func configureTeamsTableView(){
         playersTableView.dataSource   = self
         playersTableView.delegate     = self

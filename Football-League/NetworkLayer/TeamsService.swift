@@ -44,14 +44,12 @@ extension TeamsService: TargetType {
         
         switch self {
         case .getPremierLeagueTeams,.getTeamInfo :
-        return .requestPlain
+            return .requestPlain
         }
         
     }
     
     var headers: [String : String]? {
-        return [
-            "X-Auth-Token": MoyaHelpers.apiKey
-               ]
+        return ["X-Auth-Token": MoyaHelpers.apiKey]
     }
 }

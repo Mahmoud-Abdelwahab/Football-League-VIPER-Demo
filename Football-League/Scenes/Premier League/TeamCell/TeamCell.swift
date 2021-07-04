@@ -10,8 +10,8 @@ import SVGKit
 
 
 class TeamCell: UITableViewCell {
-
-static let identifier = "TeamCell"
+    
+    static let identifier = "TeamCell"
     
     @IBOutlet weak var teamLogoImageView: UIImageView!
     @IBOutlet weak var teamNameLable: UILabel!
@@ -22,7 +22,7 @@ static let identifier = "TeamCell"
         super.awakeFromNib()
         setupImagwView()
     }
-
+    
     static func nib()->UINib{
         UINib(nibName: TeamCell.identifier, bundle: Bundle.main)
     }
@@ -37,13 +37,10 @@ static let identifier = "TeamCell"
     
 }
 
-
 extension TeamCell: TeamCellViewProtocol{
     func configure(viewModel: TeamListVM) {
-      //  teamLogoImageView
         teamNameLable.text    = viewModel.name
         teamAddressLable.text = viewModel.address
-    
         teamLogoImageView.kf.setImage(with: viewModel.teamLogo, options: [.processor(SVGImgProcessor())])
     }
 }

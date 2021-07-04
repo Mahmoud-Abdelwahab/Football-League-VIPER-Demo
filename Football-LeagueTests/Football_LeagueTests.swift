@@ -9,7 +9,7 @@ import XCTest
 @testable import Football_League
 
 class Football_LeagueTests: XCTestCase {
-
+    
     var remoteLeagueTeamsWorker = RemoteLeagueTeamsWorker()
     func testGetPremierLeagueExample()throws{
         let guess = 20
@@ -21,21 +21,21 @@ class Football_LeagueTests: XCTestCase {
                 count = teamList.teams!.count
                 errorExpectation.fulfill()
             case .failure(let error):
-            
-              print(error)
+                
+                print(error)
                 errorExpectation.fulfill()
             }
         }
-            waitForExpectations(timeout: 10) { error in
-                XCTAssertEqual(guess, count, "****Error***")
-            }
+        waitForExpectations(timeout: 10) { error in
+            XCTAssertEqual(guess, count, "****Error***")
+        }
     }
-
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
 }

@@ -13,7 +13,7 @@ protocol PremierLeagueViewProtocol:BaseViewControllerProtocol, AnyObject{
 }
 
 protocol PremierLeaguePresenterProtocol:AnyObject{
-     var view: PremierLeagueViewProtocol?{get set}
+    var view: PremierLeagueViewProtocol?{get set}
     var numberOfTeams: Int{get}
     
     func viewDidLoad()

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol TeamInfoViewProtocol:BaseViewControllerProtocol, AnyObject{
     var  presenter: TeamInfoPresenterProtocol?{get set}
     func reloadPlayerTableView()
@@ -16,9 +15,9 @@ protocol TeamInfoViewProtocol:BaseViewControllerProtocol, AnyObject{
 }
 
 protocol TeamInfoPresenterProtocol:AnyObject{
-     var view: TeamInfoViewProtocol?{get set}
+    var view: TeamInfoViewProtocol?{get set}
     var teamId: Int?{get set}
-   var numberOfPlayers: Int{get}
+    var numberOfPlayers: Int{get}
     
     func viewDidLoad()
     func configureCell(playerCell: PlayerCellViewProtocol, indexPath: IndexPath)
@@ -27,7 +26,7 @@ protocol TeamInfoPresenterProtocol:AnyObject{
 }
 
 protocol TeamInfoRouterProtocol:BaseRouter {
-
+    
 }
 
 // Interactor
@@ -39,7 +38,7 @@ protocol  TeamInfoInteractorInputProtocol {
 
 protocol  TeamInfoInteractorOutputProtocol:AnyObject {
     func teamInfoFetchingFailed(with error: String)
-      func teamInfoFetchedSuccessfully(team: Team)
+    func teamInfoFetchedSuccessfully(team: Team)
 }
 
 

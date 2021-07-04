@@ -13,11 +13,12 @@ protocol BaseViewControllerProtocol {
 }
 
 extension BaseViewControllerProtocol{
+    
     func showLoadingIndicatore() {
-      
+        
     }
     
     func hideLoadingIndicatore() {
-       
+        
     }
 }

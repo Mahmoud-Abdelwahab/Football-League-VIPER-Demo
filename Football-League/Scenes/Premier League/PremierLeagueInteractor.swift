@@ -8,7 +8,7 @@
 import Foundation
 
 class PremierLeagueInteractor {
-   weak var presenter: PremierLeagueInteractorOutputProtocol?
+    weak var presenter: PremierLeagueInteractorOutputProtocol?
     var remoteLeagueTeamsWorker = RemoteLeagueTeamsWorker()
 }
 

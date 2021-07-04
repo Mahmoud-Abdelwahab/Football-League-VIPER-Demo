@@ -10,7 +10,7 @@ import UIKit
 class PlayerCell: UITableViewCell {
     
     static let identifier = "PlayerCell"
-
+    
     @IBOutlet weak var positionLable: UILabel!
     @IBOutlet weak var playerNameLable: UILabel!
     @IBOutlet weak var shirtNumberLable: UILabel!
@@ -20,7 +20,7 @@ class PlayerCell: UITableViewCell {
         super.awakeFromNib()
         setupView()
     }
-
+    
     static func nib()->UINib{
         UINib(nibName: PlayerCell.identifier, bundle: Bundle.main)
     }

@@ -10,7 +10,6 @@ import SafariServices
 
 class PremierLeagueRouter {
     weak var viewController: UIViewController?
-    
 }
 
 extension PremierLeagueRouter: PremierLeagueRouterProtocol{
@@ -26,15 +25,15 @@ extension PremierLeagueRouter: PremierLeagueRouterProtocol{
     }
     
     func showTeamInfo(with teamId: Int) {
-         let teamInfoVC = TeamInfoRouter.createModule() as! TeamInfoVC
-         teamInfoVC.presenter?.teamId = teamId
+        let teamInfoVC = TeamInfoRouter.createModule() as! TeamInfoVC
+        teamInfoVC.presenter?.teamId = teamId
         teamInfoVC.modalPresentationStyle = .fullScreen
         viewController?.present(teamInfoVC, animated: true)
     }
     
     func presentSafariVC (with url : URL) {
         AppHelper.presentSafariVC (with : url,VC: viewController!)
-     }
+    }
     
     func showAlert(with title: String, message: String) {
         viewController!.showAlert(title: title, message: message)

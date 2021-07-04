@@ -23,7 +23,6 @@
 		A7ADA84D2690A9A9002B1CB5 /* PremierLeagueRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA84C2690A9A9002B1CB5 /* PremierLeagueRouter.swift */; };
 		A7ADA84F2690AA08002B1CB5 /* PremierLeagueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA84E2690AA08002B1CB5 /* PremierLeagueProtocol.swift */; };
 		A7ADA8532690FFAA002B1CB5 /* RemoteLeagueTeamsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8522690FFAA002B1CB5 /* RemoteLeagueTeamsWorker.swift */; };
-		A7ADA8552690FFFB002B1CB5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8542690FFFB002B1CB5 /* Constants.swift */; };
 		A7ADA85E26910997002B1CB5 /* MoyaHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA85D26910997002B1CB5 /* MoyaHelpers.swift */; };
 		A7ADA86026910A18002B1CB5 /* TeamsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA85F26910A18002B1CB5 /* TeamsService.swift */; };
 		A7ADA86226911664002B1CB5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA86126911664002B1CB5 /* AppError.swift */; };
@@ -75,7 +74,6 @@
 		A7ADA84C2690A9A9002B1CB5 /* PremierLeagueRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueRouter.swift; sourceTree = "<group>"; };
 		A7ADA84E2690AA08002B1CB5 /* PremierLeagueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueProtocol.swift; sourceTree = "<group>"; };
 		A7ADA8522690FFAA002B1CB5 /* RemoteLeagueTeamsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLeagueTeamsWorker.swift; sourceTree = "<group>"; };
-		A7ADA8542690FFFB002B1CB5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A7ADA85D26910997002B1CB5 /* MoyaHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaHelpers.swift; sourceTree = "<group>"; };
 		A7ADA85F26910A18002B1CB5 /* TeamsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsService.swift; sourceTree = "<group>"; };
 		A7ADA86126911664002B1CB5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 		A7ADA835269099AA002B1CB5 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				A7ADA8542690FFFB002B1CB5 /* Constants.swift */,
 				A7ADA85D26910997002B1CB5 /* MoyaHelpers.swift */,
 				A7ADA85F26910A18002B1CB5 /* TeamsService.swift */,
 				A7ADA86126911664002B1CB5 /* AppError.swift */,
@@ -496,7 +493,6 @@
 				A7ADA84B2690A97E002B1CB5 /* PremierLeaguePresenter.swift in Sources */,
 				A7ADA8532690FFAA002B1CB5 /* RemoteLeagueTeamsWorker.swift in Sources */,
 				A7ADA84126909D23002B1CB5 /* TeamInfoVC.swift in Sources */,
-				A7ADA8552690FFFB002B1CB5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

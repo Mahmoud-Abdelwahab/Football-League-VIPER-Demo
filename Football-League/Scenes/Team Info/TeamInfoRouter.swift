@@ -31,7 +31,7 @@ extension TeamInfoRouter: TeamInfoRouterProtocol{
     
     func presentSafariVC (with url : URL) {
         AppHelper.presentSafariVC (with : url,VC: viewController!)
-     }
+    }
     
     func showAlert(with title: String, message: String) {
         viewController!.showAlert(title: title, message: message)

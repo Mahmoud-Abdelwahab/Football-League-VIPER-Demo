@@ -11,17 +11,17 @@ extension UIViewController{
     
     //MARK:- ALert
     func showAlert(title: String, message: String) {
-       let alertController = UIAlertController(title: title, message:
-         message, preferredStyle: .alert)
-       alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
-       }))
-       self.present(alertController, animated: true, completion: nil)
-     }
+        let alertController = UIAlertController(title: title, message:
+                                                    message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+        }))
+        self.present(alertController, animated: true, completion: nil)
+    }
     
     //MARK:- Activity indecator
-
+    
     var activityIndicatorTag: Int { return 999999 }
-
+    
     func startActivityIndicator(
         style: UIActivityIndicatorView.Style = UIActivityIndicatorView.Style.large,
         location: CGPoint? = nil) {
@@ -36,17 +36,17 @@ extension UIViewController{
             self.view.addSubview(activityIndicator)
         }
     }
-
-
+    
+    
     func stopActivityIndicator() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else{return}
             if let activityIndicator = self.view.subviews.filter(
-            { $0.tag == self.activityIndicatorTag}).first as? UIActivityIndicatorView {
+                { $0.tag == self.activityIndicatorTag}).first as? UIActivityIndicatorView {
                 activityIndicator.stopAnimating()
                 activityIndicator.removeFromSuperview()
             }
         }
-       }
+    }
 }
 

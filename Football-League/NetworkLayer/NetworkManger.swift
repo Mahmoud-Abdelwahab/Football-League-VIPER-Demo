@@ -11,7 +11,6 @@ import Moya
 class NetworkManger {
     
     func getData<T: Codable,E: TargetType>( provider: MoyaProvider<E>, service: E ,decodeToType type: T.Type, completionHandler: @escaping (Result<T>) -> ()) {
-        
         provider.request(service) {(result) in
             switch result {
             case .success(let response):
@@ -32,29 +31,4 @@ class NetworkManger {
             }
         }
     }
-    
-    
-    
-//
-//    func request<T: Codable>( decodeToType type: T.Type, completionHandler: @escaping (Result<T>) -> ()) {
-//        teamProvider.request(.getPremierLeagueTeams) {(result) in
-//            switch result {
-//            case .success(let response):
-//                if response.statusCode == 200 {
-//                    do {
-//                        let model = try JSONDecoder().decode(T.self, from: response.data)
-//                        completionHandler(.success(model))
-//                    } catch {
-//                        completionHandler(.failure(AppError.jsonConversionFailure))
-//                    }
-//                }else{
-//                    completionHandler(.failure(AppError.localizeError(statusCode: response.statusCode)))
-//                }
-//
-//            case .failure(let error):
-//                completionHandler(.failure(error))
-//            }
-//        }
-//
-//    }
 }

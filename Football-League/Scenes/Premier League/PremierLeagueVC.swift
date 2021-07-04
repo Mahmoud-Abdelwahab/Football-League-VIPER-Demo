@@ -8,7 +8,7 @@
 import UIKit
 
 class PremierLeagueVC: UIViewController {
-
+    
     var presenter: PremierLeaguePresenterProtocol?
     
     @IBOutlet weak var teamsTableView: UITableView!
@@ -22,7 +22,7 @@ class PremierLeagueVC: UIViewController {
 }
 
 extension PremierLeagueVC: PremierLeagueViewProtocol{
-   
+    
     
     func configureTeamsTableView(){
         teamsTableView.dataSource   = self
