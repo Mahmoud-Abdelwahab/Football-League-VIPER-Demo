@@ -39,8 +39,20 @@
 		A7ADA87C2691E2F4002B1CB5 /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7ADA87A2691E2F4002B1CB5 /* PlayerCell.xib */; };
 		A7ADA87F26920FAA002B1CB5 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA87E26920FA9002B1CB5 /* BaseProtocol.swift */; };
 		A7ADA8812692191F002B1CB5 /* BaseViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8802692191E002B1CB5 /* BaseViewControllerProtocol.swift */; };
+		A7ADA89126922737002B1CB5 /* Football_LeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA89026922737002B1CB5 /* Football_LeagueTests.swift */; };
+		A7ADA899269227C2002B1CB5 /* PlayerSquadTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA898269227C2002B1CB5 /* PlayerSquadTest.swift */; };
 		B9ECE176EE8525EEC297E853 /* Pods_Football_League.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05064623BA5C2DF3BA3902E9 /* Pods_Football_League.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7ADA89326922737002B1CB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7ADA810269098B3002B1CB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7ADA817269098B3002B1CB5;
+			remoteInfo = "Football-League";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		05064623BA5C2DF3BA3902E9 /* Pods_Football_League.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Football_League.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +91,10 @@
 		A7ADA87A2691E2F4002B1CB5 /* PlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
 		A7ADA87E26920FA9002B1CB5 /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
 		A7ADA8802692191E002B1CB5 /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
+		A7ADA88E26922736002B1CB5 /* Football-LeagueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Football-LeagueTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7ADA89026922737002B1CB5 /* Football_LeagueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football_LeagueTests.swift; sourceTree = "<group>"; };
+		A7ADA89226922737002B1CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7ADA898269227C2002B1CB5 /* PlayerSquadTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSquadTest.swift; sourceTree = "<group>"; };
 		CAAB33BD193DADCA3160250C /* Pods-Football-League.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Football-League.release.xcconfig"; path = "Target Support Files/Pods-Football-League/Pods-Football-League.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +104,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9ECE176EE8525EEC297E853 /* Pods_Football_League.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7ADA88B26922736002B1CB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				A7ADA81A269098B3002B1CB5 /* Football-League */,
+				A7ADA88F26922737002B1CB5 /* Football-LeagueTests */,
 				A7ADA819269098B3002B1CB5 /* Products */,
 				6AE65F2EF16E4136556884A4 /* Pods */,
 				E7DCDEC78C44B02F129719AC /* Frameworks */,
@@ -117,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				A7ADA818269098B3002B1CB5 /* Football-League.app */,
+				A7ADA88E26922736002B1CB5 /* Football-LeagueTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +306,16 @@
 			path = "Base VC and Protocols";
 			sourceTree = "<group>";
 		};
+		A7ADA88F26922737002B1CB5 /* Football-LeagueTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7ADA89026922737002B1CB5 /* Football_LeagueTests.swift */,
+				A7ADA898269227C2002B1CB5 /* PlayerSquadTest.swift */,
+				A7ADA89226922737002B1CB5 /* Info.plist */,
+			);
+			path = "Football-LeagueTests";
+			sourceTree = "<group>";
+		};
 		E7DCDEC78C44B02F129719AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +346,24 @@
 			productReference = A7ADA818269098B3002B1CB5 /* Football-League.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A7ADA88D26922736002B1CB5 /* Football-LeagueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7ADA89526922737002B1CB5 /* Build configuration list for PBXNativeTarget "Football-LeagueTests" */;
+			buildPhases = (
+				A7ADA88A26922736002B1CB5 /* Sources */,
+				A7ADA88B26922736002B1CB5 /* Frameworks */,
+				A7ADA88C26922736002B1CB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7ADA89426922737002B1CB5 /* PBXTargetDependency */,
+			);
+			name = "Football-LeagueTests";
+			productName = "Football-LeagueTests";
+			productReference = A7ADA88E26922736002B1CB5 /* Football-LeagueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -322,6 +375,10 @@
 				TargetAttributes = {
 					A7ADA817269098B3002B1CB5 = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					A7ADA88D26922736002B1CB5 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = A7ADA817269098B3002B1CB5;
 					};
 				};
 			};
@@ -339,6 +396,7 @@
 			projectRoot = "";
 			targets = (
 				A7ADA817269098B3002B1CB5 /* Football-League */,
+				A7ADA88D26922736002B1CB5 /* Football-LeagueTests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,6 +412,13 @@
 				A7ADA8342690992A002B1CB5 /* PremierLeagueVC.xib in Resources */,
 				A7ADA84226909D23002B1CB5 /* TeamInfoVC.xib in Resources */,
 				A7ADA825269098B6002B1CB5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7ADA88C26922736002B1CB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +500,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A7ADA88A26922736002B1CB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7ADA89126922737002B1CB5 /* Football_LeagueTests.swift in Sources */,
+				A7ADA899269227C2002B1CB5 /* PlayerSquadTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7ADA89426922737002B1CB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7ADA817269098B3002B1CB5 /* Football-League */;
+			targetProxy = A7ADA89326922737002B1CB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A7ADA826269098B6002B1CB5 /* LaunchScreen.storyboard */ = {
@@ -603,6 +685,44 @@
 			};
 			name = Release;
 		};
+		A7ADA89626922737002B1CB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Football-LeagueTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mahoudabdelwahab199390.Football-League.Football-LeagueTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Football-League.app/Football-League";
+			};
+			name = Debug;
+		};
+		A7ADA89726922737002B1CB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Football-LeagueTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mahoudabdelwahab199390.Football-League.Football-LeagueTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Football-League.app/Football-League";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -620,6 +740,15 @@
 			buildConfigurations = (
 				A7ADA82D269098B6002B1CB5 /* Debug */,
 				A7ADA82E269098B6002B1CB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7ADA89526922737002B1CB5 /* Build configuration list for PBXNativeTarget "Football-LeagueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7ADA89626922737002B1CB5 /* Debug */,
+				A7ADA89726922737002B1CB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
