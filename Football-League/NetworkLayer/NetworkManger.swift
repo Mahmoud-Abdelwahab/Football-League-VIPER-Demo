@@ -19,7 +19,8 @@ class NetworkManger {
                     do {
                         let model = try JSONDecoder().decode(T.self, from: response.data)
                         completionHandler(.success(model))
-                    } catch {
+                    } catch(let error) {
+                        print(error)
                         completionHandler(.failure(AppError.jsonConversionFailure.rawValue))
                     }
                 }else{

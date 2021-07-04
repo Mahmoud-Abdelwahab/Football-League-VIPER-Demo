@@ -14,10 +14,6 @@ class PremierLeaguePresenter{
     
     var teamsDataSource = [Team]()
     
-    var numberOfTeams: Int{
-        return teamsDataSource.count
-    }
-    
     init(view: PremierLeagueViewProtocol, interactor:PremierLeagueInteractorInputProtocol,
          router: PremierLeagueRouterProtocol)
     {
@@ -34,6 +30,10 @@ extension PremierLeaguePresenter: PremierLeaguePresenterProtocol,PremierLeagueIn
         interactor?.getPremierLeagueTeamList()
     }
     
+    var numberOfTeams: Int{
+        return teamsDataSource.count
+    }
+    
     func configueCell(cell: TeamCellViewProtocol, indexPath: IndexPath) {
         var teamCell = cell
         let viewModel = TeamListVM(team: teamsDataSource[indexPath.row])
@@ -41,7 +41,7 @@ extension PremierLeaguePresenter: PremierLeaguePresenterProtocol,PremierLeagueIn
             guard let self = self else {return}
             
             guard  let url = viewModel.website  else {
-                self.view?.showErrorAlert(message: "Website URL not found")
+                self.router?.showAlert(with: "Warning", message: "Website URL not found")
                 return
             }
             self.router?.presentSafariVC(with: url)
@@ -49,6 +49,13 @@ extension PremierLeaguePresenter: PremierLeaguePresenterProtocol,PremierLeagueIn
         teamCell.configure(viewModel: viewModel)
     }
     
+    func showTeamInfo(with indexPath: IndexPath) {
+        guard  let teamId = teamsDataSource[indexPath.row].id else {
+            self.router?.showAlert(with: "Warning", message: "Can't find the Team ID")
+            return
+        }
+        router?.showTeamInfo(with: teamId)
+    }
     
     func teamListFetchedSuccessfully(teams: [Team]) {
         view?.hideLoadingIndicatore()
@@ -58,7 +65,7 @@ extension PremierLeaguePresenter: PremierLeaguePresenterProtocol,PremierLeagueIn
     
     func teamFetchingFailed(with error: String) {
         view?.hideLoadingIndicatore()
-        print(error)
+        self.router?.showAlert(with: "Warning", message: error)
     }
 }
 

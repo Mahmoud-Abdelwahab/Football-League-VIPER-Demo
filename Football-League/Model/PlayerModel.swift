@@ -11,8 +11,20 @@ import Foundation
 struct Player: Codable {
     let id: Int?
     let name, position: String?
-    let dateOfBirth: Date?
-    let countryOfBirth, nationality: String?
     let shirtNumber: Int?
-    let role: String?
 }
+
+
+struct PlayerVM{
+    let id,shirtNumber: Int?
+    let name: String?
+    let position: String?
+    init(player: Player) {
+        self.id          = player.id
+        self.name        = player.name
+        self.position    = player.position
+        self.shirtNumber = player.shirtNumber
+    }
+}
+
+

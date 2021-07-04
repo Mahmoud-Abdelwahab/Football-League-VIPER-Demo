@@ -15,13 +15,10 @@ class PremierLeagueVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        configureTeamsTableView()
         navigationController?.setNavigationBarHidden(true, animated: false)
+        presenter?.viewDidLoad()
+        configureTeamsTableView()
     }
-
-
 }
 
 extension PremierLeagueVC: PremierLeagueViewProtocol{
@@ -33,24 +30,18 @@ extension PremierLeagueVC: PremierLeagueViewProtocol{
         teamsTableView.register(TeamCell.nib(), forCellReuseIdentifier: TeamCell.identifier)
     }
     
+    func reloadTeamListTableView() {
+        teamsTableView.reloadData()
+    }
+    
     func showLoadingIndicatore() {
         print("Should Show Loading Indicator")
+        startActivityIndicator()
     }
     
     func hideLoadingIndicatore() {
         print("Should Hide Loading Indicator")
-    }
-
-    func showSuccessAlert(message: String){
-        print("Should Show Success Alert with : ", message)
-    }
-    
-    func showErrorAlert(message: String) {
-        print("Should Show Error Alert  with : ", message)
-    }
-    
-    func reloadTeamListTableView() {
-        teamsTableView.reloadData()
+        stopActivityIndicator()
     }
 }
 
@@ -64,6 +55,10 @@ extension PremierLeagueVC:UITableViewDataSource,UITableViewDelegate{
         let cell = teamsTableView.dequeueReusableCell(withIdentifier: TeamCell.identifier) as! TeamCell
         presenter?.configueCell(cell: cell, indexPath: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.showTeamInfo(with: indexPath)
     }
 }
 

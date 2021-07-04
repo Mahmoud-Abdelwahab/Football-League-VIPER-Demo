@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,8 +20,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="125" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="77z-Mg-zSF">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
-                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" name="appBGColor"/>
                     <view key="tableHeaderView" contentMode="scaleToFill" id="3w0-vz-eKk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -29,7 +29,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premier League's Teams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2J-q6-RnJ">
                                 <rect key="frame" x="20" y="15" width="374" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="appMainFountColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -43,19 +43,22 @@
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+            <color key="backgroundColor" name="appBGColor"/>
             <constraints>
                 <constraint firstItem="77z-Mg-zSF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="F9w-Li-g6A"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="77z-Mg-zSF" secondAttribute="bottom" id="FWC-rF-XEN"/>
                 <constraint firstItem="77z-Mg-zSF" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="QD9-EF-25f"/>
                 <constraint firstItem="77z-Mg-zSF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RuP-4T-OUX"/>
+                <constraint firstAttribute="bottom" secondItem="77z-Mg-zSF" secondAttribute="bottom" id="ZQW-Wh-Ync"/>
             </constraints>
-            <point key="canvasLocation" x="20" y="97"/>
+            <point key="canvasLocation" x="18.840579710144929" y="96.428571428571431"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="appBGColor">
+            <color red="0.87450980392156863" green="0.97647058823529409" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appMainFountColor">
+            <color red="0.13333333333333333" green="0.18431372549019609" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

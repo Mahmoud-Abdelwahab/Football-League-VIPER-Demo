@@ -46,6 +46,4 @@ extension TeamCell: TeamCellViewProtocol{
     
         teamLogoImageView.kf.setImage(with: viewModel.teamLogo, options: [.processor(SVGImgProcessor())])
     }
-    
-    
 }

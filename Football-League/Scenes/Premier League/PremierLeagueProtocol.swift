@@ -7,13 +7,8 @@
 
 import Foundation
 
-protocol PremierLeagueViewProtocol: AnyObject{
+protocol PremierLeagueViewProtocol:BaseViewControllerProtocol, AnyObject{
     var presenter: PremierLeaguePresenterProtocol?{get set}
-    
-    func showSuccessAlert(message: String)
-    func showErrorAlert(message: String)
-    func showLoadingIndicatore()
-    func hideLoadingIndicatore()
     func reloadTeamListTableView()
 }
 
@@ -23,10 +18,11 @@ protocol PremierLeaguePresenterProtocol:AnyObject{
     
     func viewDidLoad()
     func configueCell(cell: TeamCellViewProtocol, indexPath: IndexPath)
+    func showTeamInfo(with indexPath: IndexPath)
 }
 
-protocol PremierLeagueRouterProtocol {
-    func presentSafariVC (with url : URL)
+protocol PremierLeagueRouterProtocol:BaseRouter {
+    func showTeamInfo(with teamId: Int)
 }
 
 // Interactor

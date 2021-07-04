@@ -7,16 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0E857B41-8231-45FB-95E6-E687B5E38C33"
-            shouldBeEnabled = "Yes"
+            uuid = "65B4EE70-46AE-4EA5-9CDF-3EACB0E4E389"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Football-League/NetworkLayer/NetworkManger.swift"
+            filePath = "Football-League/Scenes/Team Info/TeamInfoPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "getData(provider:service:decodeToType:completionHandler:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "teamInfoFetchedSuccessfully(team:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6FAE668-F792-4EB5-984E-CDEEE1F2A8DF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Football-League/Scenes/Team Info/TeamInfoPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "teamInfoFetchedSuccessfully(team:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C8E2154-B134-4C2A-A574-223F28F45258"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Football-League/Scenes/Team Info/TeamInfoPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "teamInfoFetchedSuccessfully(team:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

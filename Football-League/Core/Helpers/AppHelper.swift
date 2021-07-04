@@ -6,7 +6,12 @@
 //
 
 import Foundation
+import SafariServices
 
 enum AppHelper{
-    
+    static func presentSafariVC (with url : URL,VC: UIViewController) {
+         let safariVC = SFSafariViewController(url: url)
+         safariVC.preferredControlTintColor = .systemGreen
+        VC.present(safariVC , animated: true)
+     }
 }

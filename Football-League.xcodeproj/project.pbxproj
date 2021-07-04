@@ -31,6 +31,14 @@
 		A7ADA86626913E40002B1CB5 /* SVGImgProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA86526913E40002B1CB5 /* SVGImgProcessor.swift */; };
 		A7ADA86A2691AB79002B1CB5 /* UIIViewController+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8692691AB79002B1CB5 /* UIIViewController+EX.swift */; };
 		A7ADA86D2691AC17002B1CB5 /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA86C2691AC17002B1CB5 /* AppHelper.swift */; };
+		A7ADA86F2691BEFB002B1CB5 /* TeamInfoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA86E2691BEFB002B1CB5 /* TeamInfoProtocols.swift */; };
+		A7ADA8712691BF18002B1CB5 /* TeamInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8702691BF18002B1CB5 /* TeamInfoPresenter.swift */; };
+		A7ADA8732691BF41002B1CB5 /* TeamInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8722691BF41002B1CB5 /* TeamInfoInteractor.swift */; };
+		A7ADA8752691BF52002B1CB5 /* TeamInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8742691BF52002B1CB5 /* TeamInfoRouter.swift */; };
+		A7ADA87B2691E2F4002B1CB5 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8792691E2F4002B1CB5 /* PlayerCell.swift */; };
+		A7ADA87C2691E2F4002B1CB5 /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7ADA87A2691E2F4002B1CB5 /* PlayerCell.xib */; };
+		A7ADA87F26920FAA002B1CB5 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA87E26920FA9002B1CB5 /* BaseProtocol.swift */; };
+		A7ADA8812692191F002B1CB5 /* BaseViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ADA8802692191E002B1CB5 /* BaseViewControllerProtocol.swift */; };
 		B9ECE176EE8525EEC297E853 /* Pods_Football_League.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05064623BA5C2DF3BA3902E9 /* Pods_Football_League.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +71,14 @@
 		A7ADA86526913E40002B1CB5 /* SVGImgProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGImgProcessor.swift; sourceTree = "<group>"; };
 		A7ADA8692691AB79002B1CB5 /* UIIViewController+EX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIViewController+EX.swift"; sourceTree = "<group>"; };
 		A7ADA86C2691AC17002B1CB5 /* AppHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
+		A7ADA86E2691BEFB002B1CB5 /* TeamInfoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoProtocols.swift; sourceTree = "<group>"; };
+		A7ADA8702691BF18002B1CB5 /* TeamInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoPresenter.swift; sourceTree = "<group>"; };
+		A7ADA8722691BF41002B1CB5 /* TeamInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoInteractor.swift; sourceTree = "<group>"; };
+		A7ADA8742691BF52002B1CB5 /* TeamInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoRouter.swift; sourceTree = "<group>"; };
+		A7ADA8792691E2F4002B1CB5 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		A7ADA87A2691E2F4002B1CB5 /* PlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
+		A7ADA87E26920FA9002B1CB5 /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
+		A7ADA8802692191E002B1CB5 /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
 		CAAB33BD193DADCA3160250C /* Pods-Football-League.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Football-League.release.xcconfig"; path = "Target Support Files/Pods-Football-League/Pods-Football-League.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +183,7 @@
 		A7ADA83726909A09002B1CB5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A7ADA87D26920F8F002B1CB5 /* Base VC and Protocols */,
 				A7ADA86B2691ABF4002B1CB5 /* Helpers */,
 				A7ADA8682691AB5A002B1CB5 /* Extentions */,
 				A7ADA8672691AB47002B1CB5 /* ImageProcessor */,
@@ -196,7 +213,12 @@
 		A7ADA83E26909CF0002B1CB5 /* Team Info */ = {
 			isa = PBXGroup;
 			children = (
+				A7ADA8782691E2DD002B1CB5 /* PlayerCell */,
+				A7ADA86E2691BEFB002B1CB5 /* TeamInfoProtocols.swift */,
 				A7ADA83F26909D23002B1CB5 /* TeamInfoVC.swift */,
+				A7ADA8702691BF18002B1CB5 /* TeamInfoPresenter.swift */,
+				A7ADA8722691BF41002B1CB5 /* TeamInfoInteractor.swift */,
+				A7ADA8742691BF52002B1CB5 /* TeamInfoRouter.swift */,
 				A7ADA84026909D23002B1CB5 /* TeamInfoVC.xib */,
 			);
 			path = "Team Info";
@@ -239,6 +261,24 @@
 				A7ADA86C2691AC17002B1CB5 /* AppHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A7ADA8782691E2DD002B1CB5 /* PlayerCell */ = {
+			isa = PBXGroup;
+			children = (
+				A7ADA8792691E2F4002B1CB5 /* PlayerCell.swift */,
+				A7ADA87A2691E2F4002B1CB5 /* PlayerCell.xib */,
+			);
+			path = PlayerCell;
+			sourceTree = "<group>";
+		};
+		A7ADA87D26920F8F002B1CB5 /* Base VC and Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A7ADA87E26920FA9002B1CB5 /* BaseProtocol.swift */,
+				A7ADA8802692191E002B1CB5 /* BaseViewControllerProtocol.swift */,
+			);
+			path = "Base VC and Protocols";
 			sourceTree = "<group>";
 		};
 		E7DCDEC78C44B02F129719AC /* Frameworks */ = {
@@ -308,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7ADA87C2691E2F4002B1CB5 /* PlayerCell.xib in Resources */,
 				A7ADA83D26909B29002B1CB5 /* TeamCell.xib in Resources */,
 				A7ADA828269098B6002B1CB5 /* LaunchScreen.storyboard in Resources */,
 				A7ADA8342690992A002B1CB5 /* PremierLeagueVC.xib in Resources */,
@@ -365,20 +406,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7ADA87B2691E2F4002B1CB5 /* PlayerCell.swift in Sources */,
 				A7ADA86026910A18002B1CB5 /* TeamsService.swift in Sources */,
 				A7ADA86A2691AB79002B1CB5 /* UIIViewController+EX.swift in Sources */,
 				A7ADA8462690A724002B1CB5 /* PlayerModel.swift in Sources */,
 				A7ADA86626913E40002B1CB5 /* SVGImgProcessor.swift in Sources */,
 				A7ADA864269126C7002B1CB5 /* NetworkManger.swift in Sources */,
 				A7ADA86226911664002B1CB5 /* AppError.swift in Sources */,
+				A7ADA87F26920FAA002B1CB5 /* BaseProtocol.swift in Sources */,
 				A7ADA8332690992A002B1CB5 /* PremierLeagueVC.swift in Sources */,
 				A7ADA8442690A718002B1CB5 /* TeamModel.swift in Sources */,
 				A7ADA84F2690AA08002B1CB5 /* PremierLeagueProtocol.swift in Sources */,
+				A7ADA8732691BF41002B1CB5 /* TeamInfoInteractor.swift in Sources */,
 				A7ADA86D2691AC17002B1CB5 /* AppHelper.swift in Sources */,
+				A7ADA8812692191F002B1CB5 /* BaseViewControllerProtocol.swift in Sources */,
 				A7ADA85E26910997002B1CB5 /* MoyaHelpers.swift in Sources */,
+				A7ADA8752691BF52002B1CB5 /* TeamInfoRouter.swift in Sources */,
+				A7ADA8712691BF18002B1CB5 /* TeamInfoPresenter.swift in Sources */,
 				A7ADA81C269098B3002B1CB5 /* AppDelegate.swift in Sources */,
 				A7ADA83C26909B29002B1CB5 /* TeamCell.swift in Sources */,
 				A7ADA84D2690A9A9002B1CB5 /* PremierLeagueRouter.swift in Sources */,
+				A7ADA86F2691BEFB002B1CB5 /* TeamInfoProtocols.swift in Sources */,
 				A7ADA8482690A962002B1CB5 /* PremierLeagueInteractor.swift in Sources */,
 				A7ADA84B2690A97E002B1CB5 /* PremierLeaguePresenter.swift in Sources */,
 				A7ADA8532690FFAA002B1CB5 /* RemoteLeagueTeamsWorker.swift in Sources */,

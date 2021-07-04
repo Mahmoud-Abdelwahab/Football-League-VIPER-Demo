@@ -15,21 +15,18 @@ struct Team: Codable {
     let id: Int?
     let name, shortName: String?
     let crestURL: String?
-    let address, phone: String?
+    let address: String?
     let website: String?
-    let email: String?
-    let founded: Int?
-    let clubColors, venue: String?
     let squad: [Player]?
 
     enum CodingKeys: String, CodingKey {
         case id, name, shortName
         case crestURL = "crestUrl"
-        case address, phone, website, email, founded, clubColors, venue, squad
+        case address, website, squad
     }
 }
 
-struct TeamListVM {
+struct TeamListVM{
     let id: Int?
     let name: String?
     let address: String?
