@@ -16,15 +16,18 @@ class TeamInfoVC: UIViewController {
     @IBOutlet weak var noPlayerFoundPlaceHolderLable: UILabel!
     @IBOutlet weak var teamNameLable: UILabel!
     
+    var teamId: Int?
+    var teamInfo :Team?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
+        presenter?.getTeamInfo(with: teamId)
         configureTeamsTableView()
     }
     
     @IBAction func didTapShowTeamWebsiteBtn(_ sender: Any) {
-        presenter?.showSafariVC()
+        presenter?.showSafariVC(with: teamInfo?.website)
     }
     
     @IBAction func didTapDismissBtn(_ sender: Any) {
@@ -55,13 +58,15 @@ extension TeamInfoVC: TeamInfoViewProtocol{
         noPlayerFoundPlaceHolderLable.isHidden = isHidden
     }
     
-    func reloadPlayerTableView(){
-        playersTableView.reloadData()
-    }
     
-    func configureUI(teamName:String,logoURL:URL){
-        teamNameLable.text = teamName
-        teamAvatarImage.kf.setImage(with: logoURL, options: [.processor(SVGImgProcessor())])
+    func configureUI(team: Team){
+        teamInfo = team
+        teamNameLable.text = team.shortName
+        toggleShowingPlaceHolderLable(isHidden:team.squad?.isEmpty ?? false ? false : true)
+        if let url = URL(string: team.crestURL ?? ""){
+            teamAvatarImage.kf.setImage(with: url, options: [.processor(SVGImgProcessor())])
+        }
+        playersTableView.reloadData()
     }
 }
 
@@ -70,12 +75,13 @@ extension TeamInfoVC: TeamInfoViewProtocol{
 extension TeamInfoVC:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter?.numberOfPlayers ?? 0
+        teamInfo?.squad?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = playersTableView.dequeueReusableCell(withIdentifier: PlayerCell.identifier) as! PlayerCell
-        presenter?.configureCell(playerCell: cell, indexPath: indexPath)
+        let player = teamInfo?.squad?[indexPath.row]
+        presenter?.configureCell(playerCell: cell, player: player)
         return cell
     }
     

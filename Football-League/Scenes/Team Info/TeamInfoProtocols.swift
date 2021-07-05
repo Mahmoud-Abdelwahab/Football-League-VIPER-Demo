@@ -9,20 +9,20 @@ import Foundation
 
 protocol TeamInfoViewProtocol:BaseViewControllerProtocol, AnyObject{
     var  presenter: TeamInfoPresenterProtocol?{get set}
-    func reloadPlayerTableView()
-    func configureUI(teamName:String,logoURL:URL)
+    var teamId: Int?{get set}
+    var teamInfo :Team?{get set}
+    func configureUI(team: Team)
     func toggleShowingPlaceHolderLable(isHidden: Bool)
 }
 
 protocol TeamInfoPresenterProtocol:AnyObject{
     var view: TeamInfoViewProtocol?{get set}
-    var teamId: Int?{get set}
-    var numberOfPlayers: Int{get}
     
+    func getTeamInfo(with id :Int?)
     func viewDidLoad()
-    func configureCell(playerCell: PlayerCellViewProtocol, indexPath: IndexPath)
+    func configureCell(playerCell: PlayerCellViewProtocol, player: Player?)
     func dismiss()
-    func showSafariVC()
+    func showSafariVC(with url: String?)
 }
 
 protocol TeamInfoRouterProtocol:BaseRouter {

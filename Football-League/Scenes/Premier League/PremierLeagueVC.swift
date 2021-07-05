@@ -13,6 +13,8 @@ class PremierLeagueVC: UIViewController {
     
     @IBOutlet weak var teamsTableView: UITableView!
     
+    var teamsDataSource: [Team]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -31,7 +33,7 @@ extension PremierLeagueVC: PremierLeagueViewProtocol{
     }
     
     func reloadTeamListTableView() {
-        teamsTableView.reloadData()
+       
     }
     
     func showLoadingIndicatore() {
@@ -43,22 +45,27 @@ extension PremierLeagueVC: PremierLeagueViewProtocol{
         print("Should Hide Loading Indicator")
         stopActivityIndicator()
     }
+    
+    func configureUI(teams: [Team]){
+        self.teamsDataSource = teams
+        teamsTableView.reloadData()
+    }
 }
 
 extension PremierLeagueVC:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter?.numberOfTeams ?? 0
+        teamsDataSource?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = teamsTableView.dequeueReusableCell(withIdentifier: TeamCell.identifier) as! TeamCell
-        presenter?.configueCell(cell: cell, indexPath: indexPath)
+        presenter?.configueCell(cell: cell, team: teamsDataSource?[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.showTeamInfo(with: indexPath)
+        presenter?.showTeamInfo(with: teamsDataSource?[indexPath.row].id)
     }
 }
 

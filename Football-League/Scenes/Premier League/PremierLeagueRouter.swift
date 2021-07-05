@@ -26,7 +26,7 @@ extension PremierLeagueRouter: PremierLeagueRouterProtocol{
     
     func showTeamInfo(with teamId: Int) {
         let teamInfoVC = TeamInfoRouter.createModule() as! TeamInfoVC
-        teamInfoVC.presenter?.teamId = teamId
+        teamInfoVC.teamId = teamId
         teamInfoVC.modalPresentationStyle = .fullScreen
         viewController?.present(teamInfoVC, animated: true)
     }

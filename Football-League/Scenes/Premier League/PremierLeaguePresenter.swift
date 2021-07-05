@@ -12,8 +12,6 @@ class PremierLeaguePresenter{
     private var interactor: PremierLeagueInteractorInputProtocol?
     private let router    : PremierLeagueRouterProtocol?
     
-    var teamsDataSource = [Team]()
-    
     init(view: PremierLeagueViewProtocol, interactor:PremierLeagueInteractorInputProtocol,
          router: PremierLeagueRouterProtocol)
     {
@@ -30,13 +28,12 @@ extension PremierLeaguePresenter: PremierLeaguePresenterProtocol,PremierLeagueIn
         interactor?.getPremierLeagueTeamList()
     }
     
-    var numberOfTeams: Int{
-        return teamsDataSource.count
-    }
-    
-    func configueCell(cell: TeamCellViewProtocol, indexPath: IndexPath) {
+    func configueCell(cell: TeamCellViewProtocol, team: Team?) {
         var teamCell = cell
-        let viewModel = TeamListVM(team: teamsDataSource[indexPath.row])
+        guard  let team = team else {
+            return
+        }
+        let viewModel = TeamListVM(team: team)
         teamCell.showSafariDelegate = {[weak self] in
             guard let self = self else {return}
             
@@ -49,8 +46,8 @@ extension PremierLeaguePresenter: PremierLeaguePresenterProtocol,PremierLeagueIn
         teamCell.configure(viewModel: viewModel)
     }
     
-    func showTeamInfo(with indexPath: IndexPath) {
-        guard  let teamId = teamsDataSource[indexPath.row].id else {
+    func showTeamInfo(with teamId: Int?) {
+        guard  let teamId = teamId else {
             self.router?.showAlert(with: "Warning", message: "Can't find the Team ID")
             return
         }
@@ -59,8 +56,7 @@ extension PremierLeaguePresenter: PremierLeaguePresenterProtocol,PremierLeagueIn
     
     func teamListFetchedSuccessfully(teams: [Team]) {
         view?.hideLoadingIndicatore()
-        self.teamsDataSource.append(contentsOf: teams)
-        view?.reloadTeamListTableView()
+        view?.configureUI(teams: teams)
     }
     
     func teamFetchingFailed(with error: String) {

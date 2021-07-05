@@ -9,16 +9,17 @@ import Foundation
 
 protocol PremierLeagueViewProtocol:BaseViewControllerProtocol, AnyObject{
     var presenter: PremierLeaguePresenterProtocol?{get set}
-    func reloadTeamListTableView()
+    var teamsDataSource:[Team]?{get set}
+    
+    func configureUI(teams: [Team])
 }
 
 protocol PremierLeaguePresenterProtocol:AnyObject{
     var view: PremierLeagueViewProtocol?{get set}
-    var numberOfTeams: Int{get}
     
     func viewDidLoad()
-    func configueCell(cell: TeamCellViewProtocol, indexPath: IndexPath)
-    func showTeamInfo(with indexPath: IndexPath)
+    func configueCell(cell: TeamCellViewProtocol, team: Team?)
+    func showTeamInfo(with teamId: Int?)
 }
 
 protocol PremierLeagueRouterProtocol:BaseRouter {

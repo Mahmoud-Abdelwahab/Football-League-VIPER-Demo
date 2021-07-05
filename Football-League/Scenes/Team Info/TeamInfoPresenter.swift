@@ -12,12 +12,6 @@ class TeamInfoPresenter{
     weak var view: TeamInfoViewProtocol?
     private var interactor: TeamInfoInteractorInputProtocol?
     private let router    : TeamInfoRouterProtocol?
-    var teamId: Int?
-    var teamInfo :Team?
-    
-    var placeHolderLableIsHidden:Bool{
-        return  teamInfo?.squad?.isEmpty ?? false ? false : true
-    }
     
     init(view: TeamInfoViewProtocol, interactor:TeamInfoInteractorInputProtocol,
          router: TeamInfoRouterProtocol)
@@ -30,13 +24,12 @@ class TeamInfoPresenter{
 
 extension TeamInfoPresenter: TeamInfoPresenterProtocol,TeamInfoInteractorOutputProtocol{
     
-    var numberOfPlayers: Int {
-        return teamInfo?.squad?.count ?? 0
+    func viewDidLoad() {
+      
     }
     
-    
-    func viewDidLoad() {
-        guard  let teamId = teamId else {
+    func getTeamInfo(with id :Int?){
+        guard  let teamId = id else {
             self.router?.showAlert(with: "Warning", message: "Team ID Not Found")
             return
         }
@@ -44,32 +37,29 @@ extension TeamInfoPresenter: TeamInfoPresenterProtocol,TeamInfoInteractorOutputP
         interactor?.getTeamInfo(with: teamId)
     }
     
-    func configureCell(playerCell: PlayerCellViewProtocol, indexPath: IndexPath) {
-        guard  let player = teamInfo?.squad?[indexPath.row] else {
+    func configureCell(playerCell: PlayerCellViewProtocol, player: Player?) {
+        
+        guard  let player = player else {
             self.router?.showAlert(with: "Warning", message: "Player Not Found")
             return
         }
-        let viewModel = PlayerVM(player: player)
         
+        let viewModel = PlayerVM(player: player)
         playerCell.configure(viewModel: viewModel)
     }
     
     func teamInfoFetchedSuccessfully(team: Team) {
         view?.hideLoadingIndicatore()
-        teamInfo = team
-        let url = URL(string: team.crestURL ?? "") ?? URL(fileURLWithPath: "")
-        view?.configureUI(teamName: team.name ?? "No Name", logoURL:url )
-        view?.toggleShowingPlaceHolderLable(isHidden:placeHolderLableIsHidden)
-        view?.reloadPlayerTableView()
+        view?.configureUI(team: team)
     }
-    
+
     func teamInfoFetchingFailed(with error: String) {
         view?.hideLoadingIndicatore()
         self.router?.showAlert(with: "Warning", message: error)
     }
     
-    func showSafariVC() {
-        guard  let url = URL(string: teamInfo?.website ?? "") else {
+    func showSafariVC(with url: String?) {
+        guard  let url = URL(string: url ?? "") else {
             self.router?.showAlert(with: "Warning", message: "Website not found ...")
             return
         }
